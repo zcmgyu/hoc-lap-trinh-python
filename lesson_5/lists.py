@@ -34,3 +34,14 @@ print("Removing first item: ", list)
 # Remove item at index
 list.pop(1)
 print("Removing item at index 1: ", list)
+
+
+# Range of Indexes
+pages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+reads = pages[0:5]
+
+print("Read pages: ", reads)
+
+todayPages = pages[5:]
+print("Today's pages: ", todayPages)
