@@ -76,4 +76,81 @@ for item in list:
     print(item + '+')
 
 
-# Chưa học xong while loop
+# While loop
+
+number_of_candies = 30
+while number_of_candies > 0: # Condition (boolean): true/false. true: run, false: stop
+# while True:
+    # Phat khoi
+    print("Phát kẹo!!!")
+    # number_of_candies = number_of_candies - 1
+    number_of_candies -= 1
+    print("Số kẹo còn lại: ", number_of_candies)
+    # Không có điều kiện để dừng
+    # Chạy vô tận
+    # if number_of_candies == 0:
+        # break
+print("Hết kẹo")
+
+fruits = ["apple", "banana", "cherry", "avocado"]
+
+# Print a list
+i = 0
+print("Print a list")
+while i < len(fruits):
+    print(fruits[i])
+    i += 1
+print("Stopped!!!")
+
+# Reverse a list
+print("Reverse a list")
+j = len(fruits) - 1
+while j >= 0:
+  print(fruits[j])
+  j -= 1
+print("Stopped!!!")
+
+# Shortest way to print a list
+# for fruit in fruits:
+#     print(fruit)
+print("Use the for loop")
+[print(fruit) for fruit in fruits]
+
+# List comprehension
+print("List comprehension")
+print("Print fruits that start with 'a'")
+[print(fruit) for fruit in fruits if fruit[0] == 'a']
+new_fruits = [fruit for fruit in fruits if fruit[0] == 'a']
+print("New fruits: ", new_fruits)
+
+
+# Pass by reference | Pass by value
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+# Clone new list
+# new_fruits = [x for x in fruits]
+# Reference to list
+new_fruits = fruits
+
+
+new_fruits[0] = "avocado"
+
+print("Fruits: ", fruits)
+print("New Fruits: ", new_fruits)
+
+# Sort a list
+print("--------------------------------")
+print("Sort a list")
+fruits.sort()
+print("Fruits: ", fruits)
+
+# Sort a list in descending order
+print("Sort a list in descending order")
+fruits.sort(reverse=True)
+print("Reversed Fruits: ", fruits)
+
+# Find all indexes of a fruit in list
+print("--------------------------------")
+print("Find all indexes of a fruit in list")
+fruits = ["banana", "banana", "Orange", "Kiwi", "cherry", "banana"]
+
+print([i for i, fruit in enumerate(fruits) if fruit == "banana"])
